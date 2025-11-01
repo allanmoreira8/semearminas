@@ -88,6 +88,32 @@
         font-size: 24px;
       }
     }
+    /* Melhorias no Menu */
+    .rd-navbar-nav .rd-nav-link {
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+    .rd-navbar-nav .rd-nav-link:hover {
+      color: #7FBC4E !important;
+    }
+    .rd-nav-item.active .rd-nav-link {
+      color: #7FBC4E !important;
+    }
+    .rd-navbar .button-primary {
+      border-radius: 25px !important;
+      font-weight: 700 !important;
+      transition: all 0.3s ease !important;
+    }
+    .rd-navbar .button-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(127, 188, 78, 0.4) !important;
+    }
+    /* Oculta botão duplicado no mobile */
+    @media (max-width: 991px) {
+      .rd-navbar-main-element > .button-primary:last-child {
+        display: none;
+      }
+    }
     </style>
   </head>
   <body>
@@ -121,7 +147,7 @@
                     <ul class="rd-navbar-nav">
                       <li class="rd-nav-item"><a class="rd-nav-link" href="index.html">Home</a>
                       </li>
-                      <li class="rd-nav-item active" active><a class="rd-nav-link" href="about-us.html">Sobre nós</a>
+                      <li class="rd-nav-item active"><a class="rd-nav-link" href="about-us.html">Sobre nós</a>
                       </li>
                       <!-- <li class="rd-nav-item"><a class="rd-nav-link" href="campaigns.html">Campanhas</a>
                       </li> -->
