@@ -35,6 +35,7 @@
     }
     .team-classic-figure img {
       transition: transform 0.3s ease;
+      cursor: pointer;
     }
     .team-classic-figure:hover img {
       transform: scale(1.05);
@@ -113,6 +114,56 @@
       .rd-navbar-main-element > .button-primary:last-child {
         display: none;
       }
+    }
+    /* Lightbox para imagens */
+    .lightbox {
+      display: none;
+      position: fixed;
+      z-index: 9999;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.95);
+      animation: fadeIn 0.3s;
+    }
+    .lightbox.active {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .lightbox-content {
+      max-width: 90%;
+      max-height: 90%;
+      animation: zoomIn 0.3s;
+    }
+    .lightbox-content img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    }
+    .lightbox-close {
+      position: absolute;
+      top: 20px;
+      right: 40px;
+      color: white;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .lightbox-close:hover {
+      color: #7FBC4E;
+      transform: scale(1.2);
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes zoomIn {
+      from { transform: scale(0.5); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
     }
     </style>
   </head>
@@ -334,6 +385,13 @@
           </div>
         </div>
       </section>
+      <!-- Lightbox -->
+      <div id="lightbox" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <div class="lightbox-content">
+          <img id="lightbox-img" src="" alt="">
+        </div>
+      </div>
       <footer class="section footer-minimal context-dark">
         <div class="container wow-outer">
           <div class="wow fadeIn">
@@ -378,6 +436,40 @@
           ParallaxScroll.init();
         });
       }
+
+      // Lightbox para imagens
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImg = document.getElementById('lightbox-img');
+      const closeBtn = document.querySelector('.lightbox-close');
+      const images = document.querySelectorAll('.team-classic-figure img');
+
+      images.forEach(img => {
+        img.addEventListener('click', () => {
+          lightboxImg.src = img.src;
+          lightbox.classList.add('active');
+          document.body.style.overflow = 'hidden';
+        });
+      });
+
+      closeBtn.addEventListener('click', () => {
+        lightbox.classList.remove('active');
+        document.body.style.overflow = '';
+      });
+
+      lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) {
+          lightbox.classList.remove('active');
+          document.body.style.overflow = '';
+        }
+      });
+
+      // Fechar com ESC
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+          lightbox.classList.remove('active');
+          document.body.style.overflow = '';
+        }
+      });
     </script>
   </body>
 </html>
