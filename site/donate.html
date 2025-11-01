@@ -1,16 +1,182 @@
 <!DOCTYPE html>
-<html class="wide wow-animation" lang="en">
+<html class="wide wow-animation" lang="pt-BR">
   <head>
-    <title>Doar</title>
+    <title>Semear Minas - Doar</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Faça sua doação para o Grupo Semear Minas. PIX, transferência bancária ou QR Code. Transforme vidas através da solidariedade!">
     <link rel="icon" href="images/favicon.png" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Poppins:300,300i,400,500,600,700,800,900,900i%7CRoboto:400%7CRubik:100,400,700">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/style.css">
-    <style>.ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}</style>
+    <style>.ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}
+    /* Melhorias de UX para a página de doação */
+    .donate-hero {
+      background: linear-gradient(135deg, rgba(127, 188, 78, 0.05) 0%, rgba(24, 210, 110, 0.05) 100%);
+      padding: 60px 0;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .donate-hero-title {
+      font-size: 36px;
+      font-weight: 700;
+      color: #333;
+      margin-bottom: 20px;
+    }
+    .donate-hero-text {
+      font-size: 18px;
+      color: #666;
+      max-width: 800px;
+      margin: 0 auto 30px;
+    }
+    .pix-code {
+      background: #f8f9fa;
+      border: 2px dashed #7FBC4E;
+      border-radius: 8px;
+      padding: 20px;
+      font-family: 'Courier New', monospace;
+      font-size: 14px;
+      word-break: break-all;
+      margin: 20px 0;
+      color: #333;
+      line-height: 1.6;
+    }
+    .copy-button {
+      background: linear-gradient(135deg, #7FBC4E 0%, #18d26e 100%) !important;
+      border: none !important;
+      color: white !important;
+      padding: 15px 30px !important;
+      font-size: 16px !important;
+      font-weight: 700;
+      border-radius: 50px !important;
+      transition: all 0.3s ease;
+      box-shadow: 0 5px 15px rgba(127, 188, 78, 0.3) !important;
+      cursor: pointer;
+    }
+    .copy-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(127, 188, 78, 0.4) !important;
+      color: white !important;
+    }
+    .copy-button:active {
+      transform: translateY(0);
+    }
+    .toast-notification {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+      color: white;
+      padding: 20px 30px;
+      border-radius: 10px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      z-index: 9999;
+      display: none;
+      animation: slideInRight 0.3s ease-out;
+      max-width: 350px;
+    }
+    @keyframes slideInRight {
+      from {
+        transform: translateX(100%);
+        opacity: 0;
+      }
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+    @keyframes slideOutRight {
+      from {
+        transform: translateX(0);
+        opacity: 1;
+      }
+      to {
+        transform: translateX(100%);
+        opacity: 0;
+      }
+    }
+    .toast-notification.show {
+      display: block;
+    }
+    .toast-notification.hide {
+      animation: slideOutRight 0.3s ease-out;
+    }
+    .qr-code-section {
+      text-align: center;
+      margin-top: 30px;
+    }
+    .qr-code-section img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    .bank-info-card {
+      background: white;
+      border-radius: 10px;
+      padding: 30px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+      height: 100%;
+    }
+    .bank-info-card h4 {
+      color: #7FBC4E;
+      font-weight: 700;
+      margin-bottom: 25px;
+    }
+    .bank-info-card h5 {
+      color: #333;
+      font-weight: 600;
+      margin-bottom: 15px;
+      border-bottom: 1px solid #e9ecef;
+      padding-bottom: 10px;
+    }
+    .donation-methods {
+      margin-top: 40px;
+    }
+    .method-title {
+      color: #7FBC4E;
+      font-weight: 700;
+      margin-bottom: 20px;
+      font-size: 24px;
+    }
+    @media (max-width: 767px) {
+      .pix-code {
+        font-size: 12px;
+        padding: 15px;
+      }
+      .copy-button {
+        width: 100%;
+      }
+    }
+    /* Melhorias no Menu */
+    .rd-navbar-nav .rd-nav-link {
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+    .rd-navbar-nav .rd-nav-link:hover {
+      color: #7FBC4E !important;
+    }
+    .rd-nav-item.active .rd-nav-link {
+      color: #7FBC4E !important;
+    }
+    .rd-navbar .button-primary {
+      border-radius: 25px !important;
+      font-weight: 700 !important;
+      transition: all 0.3s ease !important;
+    }
+    .rd-navbar .button-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(127, 188, 78, 0.4) !important;
+    }
+    /* Oculta botão duplicado no mobile */
+    @media (max-width: 991px) {
+      .rd-navbar-main-element > .button-primary:last-child {
+        display: none;
+      }
+    }
+    </style>
   </head>
   <body>
     <div class="ie-panel"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
@@ -51,9 +217,9 @@
                       </li>
                       <li class="rd-nav-item"><a class="rd-nav-link" href="contacts.html">Contato</a>
                       </li>
-                    </ul><a class="button button-primary button-sm" href="#" onclick="copy_to_clipboard('00020126490014br.gov.bcb.pix0114504297140001980209Misso20245204000053039865802BR5918GRUPO SEMEAR MINAS6008BRASILIA62070503***6304D063')">Pix copia e cola</a>
+                    </ul><a class="button button-primary button-sm" href="donate.html">Doar</a>
                   </div>
-                </div><a class="button button-primary button-sm" href="#" onclick="copy_to_clipboard('00020126490014br.gov.bcb.pix0114504297140001980209Misso20245204000053039865802BR5918GRUPO SEMEAR MINAS6008BRASILIA62070503***6304D063')">Pix copia e cola</a>
+                </div><a class="button button-primary button-sm" href="donate.html">Doar</a>
               </div>
             </div>
           </nav>
@@ -74,36 +240,37 @@
           </div>
         </div>
       </section>
+      <!-- Hero Section -->
+      <section class="donate-hero">
+        <div class="container">
+          <h1 class="donate-hero-title">💚 Sua Doação Transforma Vidas!</h1>
+          <p class="donate-hero-text">Faça parte desta corrente de solidariedade que já beneficiou milhares de famílias no Norte de Minas e Vale do Jequitinhonha. Sua contribuição, seja qual for o valor, faz toda a diferença!</p>
+        </div>
+      </section>
       <!-- Base typography -->
       <section class="section section-lg bg-default">
         <div class="container">
-          <div class="row row-50 flex-lg-row-reverse justify-content-xl-between">
-            <div class="col-xl-4">
-              <div class="block-bordered-left">
-                <div class="row row-40">
-                  <div class="col-sm-6 col-xl-12">
-                    <h4 class="thin-title">Informações</h4>
-                    <h5 class="heading-font">Grupo Semear Minas</h5>
-                    <h5 class="heading-font">CNPJ: 50.429.714/0001-98</h5>
-                    <h5 class="heading-font">Instituição: Banco Santander</h5>
-                    <h5 class="heading-font">Agência: 3893</h5>
-                    <h5 class="heading-font">Conta corrente: 13006790-5</h5>
-                  </div>
-                </div>
+          <div class="row row-50 justify-content-xl-between">
+            <div class="col-xl-7 donation-methods">
+              <h3 class="method-title">🔹 PIX (Copiar Chave)</h3>
+              <div class="pix-code" id="pix-code">00020126490014br.gov.bcb.pix0114504297140001980209Misso20245204000053039865802BR5918GRUPO SEMEAR MINAS6008BRASILIA62070503***6304D063</div>
+              <button class="copy-button" onclick="copy_to_clipboard('00020126490014br.gov.bcb.pix0114504297140001980209Misso20245204000053039865802BR5918GRUPO SEMEAR MINAS6008BRASILIA62070503***6304D063')">📋 Copiar Chave PIX</button>
+              
+              <h3 class="method-title" style="margin-top: 60px;">📱 QR Code</h3>
+              <div class="qr-code-section">
+                <img src="images/qr-code.jpg" alt="QR Code PIX para doação ao Grupo Semear Minas" style="max-width: 400px;">
+                <p style="margin-top: 20px; color: #666;">Escaneie com o aplicativo do seu banco para doar instantaneamente via PIX</p>
               </div>
             </div>
-            <div class="col-xl-7">
-              <ul class="list-xxl heading-list">
-                <li>
-                  <h3>PIX copia e cola</h3>
-                  <p>00020126490014br.gov.bcb.pix0114504297140001980209Misso20245204000053039865802BR5918GRUPO SEMEAR MINAS6008BRASILIA62070503***6304D063</p>
-                  <p><a class="button button-primary button-sm" href="#" onclick="copy_to_clipboard('00020126490014br.gov.bcb.pix0114504297140001980209Misso20245204000053039865802BR5918GRUPO SEMEAR MINAS6008BRASILIA62070503***6304D063')">Copiar PIX Copia e Cola</a></p>
-                </li>
-                <li>
-                  <h3>QR Code</h3>
-                  <p><img src="images/qr-code.jpg" height="500" width="540" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></p>
-                </li>
-              </ul>
+            <div class="col-xl-4">
+              <div class="bank-info-card">
+                <h4>🏦 Transferência Bancária</h4>
+                <h5>Grupo Semear Minas</h5>
+                <h5>CNPJ: 50.429.714/0001-98</h5>
+                <h5>Banco: Santander</h5>
+                <h5>Agência: 3893</h5>
+                <h5>Conta: 13006790-5</h5>
+              </div>
             </div>
           </div>
         </div>
@@ -133,14 +300,79 @@
         </div>
       </footer>
     </div>
+    <!-- Toast Notification -->
+    <div id="toast-notification" class="toast-notification">
+      ✅ Chave PIX copiada com sucesso!
+    </div>
     <div class="snackbars" id="form-output-global"></div>
-    <script>
-      function copy_to_clipboard( text ) {
-        navigator.clipboard.writeText( text );
-        alert('PIX copiado!')
-      }
-    </script>
     <script src="js/core.min.js"></script>
     <script src="js/script.js"></script>
+    <script>
+      // Função para mostrar toast notification
+      function showToast(message) {
+        const toast = document.getElementById('toast-notification');
+        toast.textContent = message;
+        toast.classList.remove('hide');
+        toast.classList.add('show');
+        
+        setTimeout(function() {
+          toast.classList.remove('show');
+          toast.classList.add('hide');
+          setTimeout(function() {
+            toast.classList.remove('hide');
+          }, 300);
+        }, 3000);
+      }
+
+      // Função melhorada para copiar PIX
+      function copy_to_clipboard(text) {
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(text).then(function() {
+            showToast('✅ Chave PIX copiada com sucesso!');
+          }).catch(function(err) {
+            console.error('Erro ao copiar:', err);
+            showToast('⚠️ Não foi possível copiar. Tente selecionar o texto manualmente.');
+          });
+        } else {
+          // Fallback para navegadores antigos
+          const textArea = document.createElement('textarea');
+          textArea.value = text;
+          textArea.style.position = 'fixed';
+          textArea.style.top = '-9999px';
+          textArea.style.opacity = '0';
+          document.body.appendChild(textArea);
+          textArea.select();
+          textArea.setSelectionRange(0, 99999); // Para mobile
+          try {
+            const successful = document.execCommand('copy');
+            if (successful) {
+              showToast('✅ Chave PIX copiada com sucesso!');
+            } else {
+              showToast('⚠️ Não foi possível copiar. Tente selecionar o texto manualmente.');
+            }
+          } catch (err) {
+            showToast('⚠️ Não foi possível copiar. Tente selecionar o texto manualmente.');
+          }
+          document.body.removeChild(textArea);
+        }
+      }
+
+      // Forçar WOW.js em mobile
+      if (typeof WOW !== 'undefined') {
+        window.addEventListener('load', () => {
+          const html = document.querySelector('html');
+          if (html && html.classList.contains('wow-animation')) {
+            new WOW().init();
+          }
+        });
+      }
+
+      // Forçar ParallaxScroll em mobile
+      if (typeof ParallaxScroll !== 'undefined') {
+        window.addEventListener('load', () => {
+          ParallaxScroll.init();
+        });
+      }
+    </script>
   </body>
 </html>

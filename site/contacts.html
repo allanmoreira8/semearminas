@@ -1,16 +1,99 @@
 <!DOCTYPE html>
-<html class="wide wow-animation" lang="en">
+<html class="wide wow-animation" lang="pt-BR">
   <head>
-    <title>Contato</title>
+    <title>Semear Minas - Contato</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Entre em contato com o Grupo Semear Minas. Telefone, WhatsApp, endereço e e-mail para doações, parcerias e voluntariado.">
     <link rel="icon" href="images/favicon.png" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Poppins:300,300i,400,500,600,700,800,900,900i%7CRoboto:400%7CRubik:100,400,700">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/style.css">
-    <style>.ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}</style>
+    <style>.ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}
+    /* Melhorias de UX para a página de contato */
+    .box-icon-classic {
+      transition: transform 0.3s ease;
+    }
+    .box-icon-classic:hover {
+      transform: translateY(-5px);
+    }
+    .box-icon-caption h4 a {
+      color: #333;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    .box-icon-caption h4 a:hover {
+      color: #7FBC4E;
+    }
+    .contact-cta-section {
+      background: linear-gradient(135deg, rgba(127, 188, 78, 0.05) 0%, rgba(24, 210, 110, 0.05) 100%);
+      padding: 60px 0;
+      text-align: center;
+      margin-top: 40px;
+    }
+    .contact-cta-title {
+      font-size: 32px;
+      font-weight: 700;
+      color: #333;
+      margin-bottom: 20px;
+    }
+    .contact-cta-text {
+      font-size: 18px;
+      color: #666;
+      margin-bottom: 30px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .contact-cta-section .button-primary {
+      background: linear-gradient(135deg, #7FBC4E 0%, #18d26e 100%) !important;
+      border: none !important;
+      color: white !important;
+      padding: 18px 40px !important;
+      font-size: 18px !important;
+      font-weight: 700;
+      border-radius: 50px !important;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: all 0.3s ease;
+      box-shadow: 0 5px 15px rgba(127, 188, 78, 0.3) !important;
+      display: inline-block;
+      text-decoration: none;
+    }
+    .contact-cta-section .button-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(127, 188, 78, 0.4) !important;
+      color: white !important;
+    }
+    /* Melhorias no Menu */
+    .rd-navbar-nav .rd-nav-link {
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+    .rd-navbar-nav .rd-nav-link:hover {
+      color: #7FBC4E !important;
+    }
+    .rd-nav-item.active .rd-nav-link {
+      color: #7FBC4E !important;
+    }
+    .rd-navbar .button-primary {
+      border-radius: 25px !important;
+      font-weight: 700 !important;
+      transition: all 0.3s ease !important;
+    }
+    .rd-navbar .button-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(127, 188, 78, 0.4) !important;
+    }
+    /* Oculta botão duplicado no mobile */
+    @media (max-width: 991px) {
+      .rd-navbar-main-element > .button-primary:last-child {
+        display: none;
+      }
+    }
+    </style>
   </head>
   <body>
     <div class="ie-panel"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
@@ -106,6 +189,16 @@
           </div>
         </div>
       </section>
+      <!-- CTA Section -->
+      <section class="contact-cta-section">
+        <div class="container">
+          <h2 class="contact-cta-title">💚 Pronto para Transformar Vidas?</h2>
+          <p class="contact-cta-text">Sua ajuda faz toda a diferença! Faça sua doação agora e faça parte desta corrente de solidariedade que já transformou milhares de vidas em 17 anos.</p>
+          <div>
+            <a href="donate.html" class="button button-primary button-lg">Fazer Doação</a>
+          </div>
+        </div>
+      </section>
       <!-- Contact us-->
       <!-- <section class="section section-lg bg-gray-1 text-center">
         <div class="container">
@@ -167,5 +260,23 @@
     <div class="snackbars" id="form-output-global"></div>
     <script src="js/core.min.js"></script>
     <script src="js/script.js"></script>
+    <script>
+      // Forçar WOW.js em mobile
+      if (typeof WOW !== 'undefined') {
+        window.addEventListener('load', () => {
+          const html = document.querySelector('html');
+          if (html && html.classList.contains('wow-animation')) {
+            new WOW().init();
+          }
+        });
+      }
+
+      // Forçar ParallaxScroll em mobile
+      if (typeof ParallaxScroll !== 'undefined') {
+        window.addEventListener('load', () => {
+          ParallaxScroll.init();
+        });
+      }
+    </script>
   </body>
 </html>
