@@ -1,16 +1,94 @@
 <!DOCTYPE html>
-<html class="wide wow-animation" lang="en">
+<html class="wide wow-animation" lang="pt-BR">
   <head>
-    <title>Sobre nós</title>
+    <title>Semear Minas - Sobre Nós</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Conheça a história do Grupo Semear Minas. 17 anos transformando vidas através da solidariedade no Norte de Minas e Vale do Jequitinhonha.">
     <link rel="icon" href="images/favicon.png" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Poppins:300,300i,400,500,600,700,800,900,900i%7CRoboto:400%7CRubik:100,400,700">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/style.css">
-    <style>.ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}</style>
+    <style>.ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}
+    /* Melhorias de UX */
+    .btn-impact {
+      background: linear-gradient(135deg, #7FBC4E 0%, #18d26e 100%);
+      border: none;
+      color: white;
+      padding: 18px 40px;
+      font-size: 18px;
+      font-weight: 700;
+      border-radius: 50px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: all 0.3s ease;
+      box-shadow: 0 5px 15px rgba(127, 188, 78, 0.3);
+      display: inline-block;
+      text-decoration: none;
+    }
+    .btn-impact:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(127, 188, 78, 0.4);
+      color: white;
+    }
+    .team-classic-figure img {
+      transition: transform 0.3s ease;
+    }
+    .team-classic-figure:hover img {
+      transform: scale(1.05);
+    }
+    .section-timeline {
+      background: linear-gradient(135deg, rgba(127, 188, 78, 0.05) 0%, rgba(24, 210, 110, 0.05) 100%);
+      padding: 60px 0;
+    }
+    .section-timeline h3 {
+      color: #333;
+      font-weight: 700;
+      font-size: 32px;
+      margin-bottom: 50px;
+    }
+    .timeline-column {
+      padding: 20px;
+    }
+    .list-marked li {
+      padding: 15px;
+      margin-bottom: 10px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      font-weight: 600;
+      color: #333;
+      padding-left: 15px !important;
+    }
+    .list-marked li::before {
+      display: none !important;
+    }
+    .list-marked li:hover {
+      transform: translateX(5px);
+      box-shadow: 0 5px 15px rgba(127, 188, 78, 0.2);
+    }
+    .list-marked li span {
+      margin-right: 10px;
+      font-size: 18px;
+    }
+    .about-hero-section {
+      background: linear-gradient(135deg, rgba(127, 188, 78, 0.05) 0%, rgba(24, 210, 110, 0.05) 100%);
+      padding: 40px 0;
+      border-bottom: 3px solid #7FBC4E;
+    }
+    @media (max-width: 767px) {
+      .team-classic-figure img {
+        width: 100%;
+        height: auto;
+      }
+      .section-timeline h3 {
+        font-size: 24px;
+      }
+    }
+    </style>
   </head>
   <body>
     <div class="ie-panel"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
@@ -90,15 +168,18 @@
                 carentes nas regiões Norte de Minas e Vale do Jequitinhonha.</p>
               <p>Assim seguimos nesses 17 anos, sem nenhum vinculo político ou religioso, acreditando no poder da união e na solidariedade, focando em proporcionar
                 lembranças especiais para aqueles que mais precisam, construindo momentos mais dignos e acolhedores para essas pessoas!</p>
+              <div style="margin-top: 40px; text-align: center;">
+                <a href="donate.html" class="btn-impact">Quero Ajudar</a>
+              </div>
             </div>
           </div>
         </div>
       </section>
-      <section class="section section-lg bg-default">
+      <section class="section section-lg section-timeline">
         <div class="container">
-          <h3 class="text-center">Por onde passamos</h3>
+          <h3 class="text-center">📍 Por onde passamos</h3>
           <div class="row row-50">
-            <div class="col-sm-6">
+            <div class="col-sm-6 timeline-column">
               <ul class="list-marked">
                 <li><span class="linearicons-loading" style="color: #18d26e;"></span> 2025: Setubinha <small style="color: #18d26e;">(Em andamento)</small></li>
                 <li>2024: Fruta de Leite</li>
@@ -110,8 +191,8 @@
                 <li>2018: Itaipé</li>
               </ul>
             </div>
-            <div class="col-sm-6">
-              <ol class="list-marked">
+            <div class="col-sm-6 timeline-column">
+              <ul class="list-marked">
                 <li>2017: Itinga</li>
                 <li>2016: Itacambira</li>
                 <li>2015: Pontinha</li>
@@ -121,7 +202,7 @@
                 <li>2011: Matias Cardoso</li>
                 <li>2010: Itaobim</li>
                 <li>2009: Matias Cardoso</li>
-              </ol>
+              </ul>
             </div>
           </div>
         </div>
@@ -254,5 +335,23 @@
     <div class="snackbars" id="form-output-global"></div>
     <script src="js/core.min.js"></script>
     <script src="js/script.js"></script>
+    <script>
+      // Forçar WOW.js em mobile
+      if (typeof WOW !== 'undefined') {
+        window.addEventListener('load', () => {
+          const html = document.querySelector('html');
+          if (html && html.classList.contains('wow-animation')) {
+            new WOW().init();
+          }
+        });
+      }
+
+      // Forçar ParallaxScroll em mobile
+      if (typeof ParallaxScroll !== 'undefined') {
+        window.addEventListener('load', () => {
+          ParallaxScroll.init();
+        });
+      }
+    </script>
   </body>
 </html>

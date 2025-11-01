@@ -1,16 +1,104 @@
 <!DOCTYPE html>
 <html class="wide wow-animation" lang="pt-BR">
   <head>
-    <title>Nossos padrinhos</title>
+    <title>Semear Minas - Nossos Padrinhos</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Conheça nossos padrinhos e parceiros que apoiam o Grupo Semear Minas. Junte-se a esta rede de solidariedade e faça parte da transformação de vidas.">
     <link rel="icon" href="images/favicon.png" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Poppins:300,300i,400,500,600,700,800,900,900i%7CRoboto:400%7CRubik:100,400,700">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/style.css">
-    <style>.ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}</style>
+    <style>.ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}
+    /* Melhorias de UX para a página de parceiros */
+    .partner-section {
+      padding-bottom: 0;
+    }
+    .partner-cta-section {
+      background: linear-gradient(135deg, rgba(127, 188, 78, 0.05) 0%, rgba(24, 210, 110, 0.05) 100%);
+      padding: 60px 0;
+      text-align: center;
+      margin-top: 40px;
+    }
+    .partner-cta-title {
+      font-size: 32px;
+      font-weight: 700;
+      color: #333;
+      margin-bottom: 20px;
+    }
+    .partner-cta-text {
+      font-size: 18px;
+      color: #666;
+      margin-bottom: 30px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .partner-cta-buttons {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+    .partner-cta-buttons .button {
+      min-width: 200px;
+      padding: 18px 40px !important;
+      font-weight: 700;
+      border-radius: 50px !important;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: all 0.3s ease;
+      font-size: 16px !important;
+    }
+    .partner-cta-buttons .button-primary {
+      background: linear-gradient(135deg, #7FBC4E 0%, #18d26e 100%) !important;
+      border: none !important;
+      color: white !important;
+      box-shadow: 0 5px 15px rgba(127, 188, 78, 0.3) !important;
+    }
+    .partner-cta-buttons .button-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(127, 188, 78, 0.4) !important;
+      color: white !important;
+      background: linear-gradient(135deg, #7FBC4E 0%, #18d26e 100%) !important;
+    }
+    .partner-cta-buttons .button-outline {
+      background: white !important;
+      border: 2px solid #7FBC4E !important;
+      color: #7FBC4E !important;
+    }
+    .partner-cta-buttons .button-outline:hover {
+      background: #7FBC4E !important;
+      color: white !important;
+      transform: translateY(-3px);
+      border: 2px solid #7FBC4E !important;
+    }
+    @media (max-width: 575px) {
+      .partner-cta-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+      .partner-cta-buttons .button {
+        width: 100%;
+        max-width: 300px;
+      }
+    }
+    .team-classic-figure img {
+      transition: transform 0.3s ease;
+    }
+    .team-classic-figure:hover img {
+      transform: scale(1.05);
+    }
+    @media (max-width: 767px) {
+      .team-classic-figure img {
+        width: 100%;
+        height: auto;
+      }
+    }
+    </style>
   </head>
   <body>
     <div class="ie-panel"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
@@ -234,7 +322,17 @@
             </div>
           </div>
         </div>
-      </div>
+      </section>
+      <!-- CTA Section -->
+      <section class="partner-cta-section">
+        <div class="container">
+          <h2 class="partner-cta-title">💚 Seja um Parceiro do Semear Minas</h2>
+          <p class="partner-cta-text">Quer fazer parte desta rede de solidariedade? Entre em contato conosco ou faça sua doação agora e ajude a transformar vidas!</p>
+          <div class="partner-cta-buttons">
+            <a href="contacts.html" class="button button-primary button-lg">Entre em </br> Contato</a>
+            <a href="donate.html" class="button button-outline button-lg">Quero Doar</a>
+          </div>
+        </div>
       </section>
       <!-- Page Footer-->
       <footer class="section footer-minimal context-dark">
@@ -264,5 +362,23 @@
     <div class="snackbars" id="form-output-global"></div>
     <script src="js/core.min.js"></script>
     <script src="js/script.js"></script>
+    <script>
+      // Forçar WOW.js em mobile
+      if (typeof WOW !== 'undefined') {
+        window.addEventListener('load', () => {
+          const html = document.querySelector('html');
+          if (html && html.classList.contains('wow-animation')) {
+            new WOW().init();
+          }
+        });
+      }
+
+      // Forçar ParallaxScroll em mobile
+      if (typeof ParallaxScroll !== 'undefined') {
+        window.addEventListener('load', () => {
+          ParallaxScroll.init();
+        });
+      }
+    </script>
   </body>
 </html>
