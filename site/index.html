@@ -5,12 +5,164 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Semear Minas - Transformando vidas através da solidariedade. Ação solidária 2025 em Setubinha. Doe brinquedos, alimentos e itens de higiene para 350 famílias e 1000 crianças.">
     <link rel="icon" href="images/favicon.png" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Poppins:300,300i,400,500,600,700,800,900,900i%7CRoboto:400%7CRubik:100,400,700">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/style.css">
-    <style>.ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}</style>
+    <style>.ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}
+    /* Estilos customizados para conversão */
+    .urgency-banner {
+      background: linear-gradient(135deg, #7FBC4E 0%, #18d26e 100%);
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-weight: 600;
+      font-size: 16px;
+      margin-bottom: 0;
+      position: relative;
+      overflow: hidden;
+    }
+    .urgency-banner::before {
+      content: '';
+      position: absolute;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+      animation: shine 3s infinite;
+    }
+    @keyframes shine {
+      0% { left: -100%; }
+      100% { left: 200%; }
+    }
+    .cta-fixed {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: rgba(127, 188, 78, 0.98);
+      padding: 15px;
+      text-align: center;
+      box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+      transform: translateY(0);
+      transition: transform 0.3s ease;
+    }
+    .cta-fixed.hidden {
+      transform: translateY(100%);
+    }
+    .cta-fixed a {
+      color: white !important;
+      font-weight: 700;
+      font-size: 18px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .impact-numbers {
+      background: #f8f9fa;
+      padding: 60px 15px;
+    }
+    @media (min-width: 768px) {
+      .impact-numbers {
+        padding: 60px 30px;
+      }
+    }
+    .impact-box {
+      text-align: center;
+      padding: 30px 20px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      margin-bottom: 20px;
+    }
+    .impact-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(127, 188, 78, 0.2);
+    }
+    .impact-number {
+      font-size: 48px;
+      font-weight: 700;
+      color: #7FBC4E;
+      display: block;
+      margin-bottom: 10px;
+      font-family: 'Rubik', sans-serif;
+    }
+    .impact-label {
+      font-size: 16px;
+      color: #666;
+      font-weight: 500;
+    }
+    .trust-badges {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+      flex-wrap: wrap;
+      padding: 30px 0;
+      border-top: 2px solid #e9ecef;
+      margin-top: 40px;
+    }
+    .trust-item {
+      text-align: center;
+      flex: 0 1 150px;
+    }
+    .trust-icon {
+      font-size: 48px;
+      color: #7FBC4E;
+      margin-bottom: 10px;
+    }
+    .trust-text {
+      font-size: 14px;
+      color: #666;
+      font-weight: 600;
+    }
+    .mission-highlight {
+      background: linear-gradient(135deg, rgba(127, 188, 78, 0.05) 0%, rgba(24, 210, 110, 0.05) 100%);
+      padding: 30px;
+      border-radius: 10px;
+      border-left: 4px solid #7FBC4E;
+      margin: 20px 0;
+    }
+    .mission-date {
+      font-size: 24px;
+      font-weight: 700;
+      color: #7FBC4E;
+      margin: 15px 0;
+    }
+    .btn-impact {
+      background: linear-gradient(135deg, #7FBC4E 0%, #18d26e 100%);
+      border: none;
+      color: white;
+      padding: 18px 40px;
+      font-size: 18px;
+      font-weight: 700;
+      border-radius: 50px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: all 0.3s ease;
+      box-shadow: 0 5px 15px rgba(127, 188, 78, 0.3);
+      display: inline-block;
+      text-decoration: none;
+    }
+    .btn-impact:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(127, 188, 78, 0.4);
+      color: white;
+    }
+    .hero-subtitle {
+      font-size: 24px;
+      margin-top: 20px;
+      font-weight: 500;
+    }
+    @media (min-width: 992px) {
+      .cta-fixed {
+        display: none;
+      }
+    }
+    </style>
   </head>
   <body>
     <div class="ie-panel"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
@@ -23,6 +175,10 @@
       </div>
     </div>
     <div class="page">
+      <!-- Banner de Urgência -->
+      <div class="urgency-banner">
+        🎁 <strong>Ação Solidária 2025 em Setubinha</strong> - Ajude-nos a transformar vidas! Doe agora 💚
+      </div>
       <!-- Page Header-->
       <header class="section page-header">
         <!-- RD Navbar-->
@@ -68,7 +224,10 @@
               <div class="col-lg-12">
                 <div class="bunner-content-modern text-center">
                   <h1 class="main-bunner-title">Nós precisamos de você!</h1>
-                  <p>Setubinha é a cidade que irá receber nossas Sementes do Bem em 2025.</p>
+                  <p class="hero-subtitle">Setubinha é a cidade que irá receber nossas Sementes do Bem em 2025.</p>
+                  <div style="margin-top: 30px;">
+                    <a href="donate.html" class="btn-impact">Quero Doar Agora</a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -77,37 +236,86 @@
       </section>
       <section class="section section-xl bg-gray-1">
         <div class="container">
+          <div class="row row-50 justify-content-center">
+            <div class="col-lg-10 text-center mb-5">
+              <h2 style="font-size: 42px; font-weight: 700; margin-bottom: 20px;">Nossa missão em 2025: Setubinha</h2>
+              <p style="font-size: 18px; color: #666; max-width: 800px; margin: 0 auto;">Transformando vidas através da solidariedade no Vale do Jequitinhonha</p>
+            </div>
+          </div>
           <div class="row row-50">
             <div class="col-lg-6">
-              <h3>Nossa missão em 2025: Setubinha</h3>
-              <p class="text-opacity-80">Setubinha é o município de Minas Gerais que receberá nossas Sementes do Bem em 2025. Localizada na região Sudeste do Brasil, a cidade possui uma população estimada de aproximadamente 10.000 habitantes e uma área territorial de 534 km². Com uma economia baseada principalmente na agricultura e pecuária, Setubinha faz parte do Vale do Jequitinhonha, região conhecida historicamente por desafios socioeconômicos.</p>
-              <p class="text-opacity-80">Essa realidade torna nossa ação solidária ainda mais relevante, pois vamos levar esperança e uma oportunidade de transformação para famílias que enfrentam dificuldades financeiras. Sua doação fará toda a diferença na vida dessas pessoas!</p>
-              <div class="row row-30">
+              <div style="background: white; padding: 40px; border-radius: 10px; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
+                <h3 style="color: #7FBC4E; margin-bottom: 25px;">📍 Conheça Setubinha</h3>
+                <p class="text-opacity-80">Setubinha é o município de Minas Gerais que receberá nossas Sementes do Bem em 2025. Localizada na região Sudeste do Brasil, a cidade possui uma população estimada de aproximadamente 10.000 habitantes e uma área territorial de 534 km².</p>
+                <p class="text-opacity-80">Com uma economia baseada principalmente na agricultura e pecuária, Setubinha faz parte do Vale do Jequitinhonha, região conhecida historicamente por desafios socioeconômicos.</p>
+                <div style="background: linear-gradient(135deg, #7FBC4E 0%, #18d26e 100%); padding: 20px; border-radius: 8px; margin-top: 30px; color: white;">
+                  <strong style="display: block; margin-bottom: 10px;">💚 Por que sua ajuda é essencial:</strong>
+                  <p style="margin: 0; font-size: 15px;">Essa realidade torna nossa ação solidária ainda mais relevante. Vamos levar esperança e uma oportunidade de transformação para famílias que enfrentam dificuldades financeiras. Sua doação fará toda a diferença!</p>
+                </div>
+              </div>
+              <div class="row row-30" style="margin-top: 30px;">
                 <div class="col-sm-6">
-                  <div class="box-icon-modern">
+                  <div class="box-icon-modern" style="background: #f8f9fa; padding: 20px; border-radius: 10px; height: 100%;">
                     <div class="box-icon-inner decorate-circle"><span class="icon-xl linearicons-users icon-primary"></span></div>
                     <div class="box-icon-caption">
                       <h4>População estimada</h4>
-                      <p>10.000 habitantes</p>
+                      <p style="font-weight: 600; color: #7FBC4E; font-size: 18px;">10.000 habitantes</p>
                     </div>
                   </div>
                 </div>
                 <div class="col-sm-6">
-                  <div class="box-icon-modern">
+                  <div class="box-icon-modern" style="background: #f8f9fa; padding: 20px; border-radius: 10px; height: 100%;">
                     <div class="box-icon-inner decorate-triangle"><span class="icon-xl linearicons-wallet icon-primary"></span></div>
                     <div class="box-icon-caption">
                       <h4>Renda per capita</h4>
-                      <p>R$ 321/mês</p>
+                      <p style="font-weight: 600; color: #7FBC4E; font-size: 18px;">R$ 321/mês</p>
                     </div>
                   </div>
                 </div>
               </div>
-              <p class="small text-opacity-60" style="margin-top: 15px;">Fonte: <a href="https://www.ibge.gov.br/cidades-e-estados/mg/setubinha.html" target="_blank" style="color: inherit; text-decoration: underline;">IBGE - Instituto Brasileiro de Geografia e Estatística</a></p>
+              <p class="small text-opacity-60" style="margin-top: 25px; text-align: center; background: white; padding: 20px; border-radius: 8px;">Fonte: <a href="https://www.ibge.gov.br/cidades-e-estados/mg/setubinha.html" target="_blank" style="color: inherit; text-decoration: underline;">IBGE - Instituto Brasileiro de Geografia e Estatística</a></p>
+              <div style="margin-top: 30px; text-align: center;">
+                <a href="donate.html" class="btn-impact">Quero Doar Agora</a>
+              </div>
             </div>
             <div class="col-lg-6">
-              <h3 class="text-center">Localização</h3>
-              <div class="google-map-wrap">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7606.093204973497!2d-42.16764725100925!3d-17.60052178329379!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xb2ede070be6c15%3A0xa3689f7f003be39d!2sSetubinha%2C%20MG%2C%2039685-000!5e0!3m2!1spt-BR!2sbr!4v1762002094195!5m2!1spt-BR!2sbr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              <div style="background: white; padding: 40px; border-radius: 10px; box-shadow: 0 5px 20px rgba(0,0,0,0.08); height: 100%;">
+                <h3 style="color: #7FBC4E; margin-bottom: 25px; text-align: center;">🗺️ Localização</h3>
+                <div class="google-map-wrap" style="border-radius: 8px; overflow: hidden;">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7606.093204973497!2d-42.16764725100925!3d-17.60052178329379!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xb2ede070be6c15%3A0xa3689f7f003be39d!2sSetubinha%2C%20MG%2C%2039685-000!5e0!3m2!1spt-BR!2sbr!4v1762002094195!5m2!1spt-BR!2sbr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div style="margin-top: 20px; text-align: center;">
+                  <p style="color: #666; font-size: 14px; margin: 0;">
+                    📍 Setubinha/MG - Vale do Jequitinhonha
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="impact-numbers">
+            <div class="row text-center">
+              <div class="col-md-12 mb-4">
+                <h2 style="font-size: 36px; font-weight: 700; color: #333; margin-bottom: 50px;">Nosso Impacto em Números</h2>
+              </div>
+              <div class="col-sm-6 col-md-4">
+                <div class="impact-box">
+                  <span class="impact-number">17</span>
+                  <span class="impact-label">Anos Transformando Vidas</span>
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-4">
+                <div class="impact-box">
+                  <span class="impact-number">10000+</span>
+                  <span class="impact-label">Famílias Atendidas</span>
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-4">
+                <div class="impact-box">
+                  <span class="impact-number">1000+</span>
+                  <span class="impact-label">Crianças Beneficiadas</span>
+                </div>
               </div>
             </div>
           </div>
@@ -128,8 +336,11 @@
             </div>
             <div class="col-lg-6 col-xl-5">
               <div class="innset-xl-left-70">
-                <h3>Nossa missão</h3>
-                <p class="text-opacity-80">A ação solidária acontecerá nos dias <strong>21 e 22 de dezembro de 2025</strong> em Setubinha/MG. A meta é atender a 350 famílias e mais de 1000 crianças. Sua doação pode transformar vidas e levar esperança a quem enfrenta momentos difíceis.</p>
+                <h3 style="color: #7FBC4E; margin-bottom: 20px;">💝 O que você pode doar</h3>
+                <div class="mission-highlight">
+                  <p class="mission-date">📅 21 e 22 de Dezembro de 2025</p>
+                  <p class="text-opacity-80 mb-0">A ação solidária acontecerá em Setubinha. A meta é atender a 350 famílias e mais de 1000 crianças. Sua doação pode transformar vidas e levar esperança a quem enfrenta momentos difíceis.</p>
+                </div>
                 <div class="row row-50">
                   <div class="col-md-6 col-lg-12">
                     <div class="box-icon-modern">
@@ -196,8 +407,11 @@
           <div class="row justify-content-center text-center">
             <div class="col-md-9 col-lg-7 wow-outer">
               <div class="wow slideInDown">
-                <h3>Natal Solidário 2025</h3>
+                <h3>Natal Solidário</h3>
                 <p>Para o natal de 2025 temos 3 iniciativa:</p>
+                <div style="margin-top: 40px;">
+                  <a href="donate.html" class="btn-impact">Fazer Minha Doação</a>
+                </div>
               </div>
             </div>
           </div>
@@ -205,17 +419,17 @@
             <div class="col-md-6 col-lg-4 wow-outer">
               <div class="wow fadeInUp">
                 <article class="box-causes">
-                  <div class="box-causes-img"><img src="images/causes-01-372x396.jpg" alt="" width="372" height="396"/><a class="button button-sm button-primary" href="donate.html">Doar</a>
+                  <div class="box-causes-img"><img src="images/semear-adocando-vida.png" alt="" width="372" height="396"/><a class="button button-sm button-primary" href="donate.html">Doar</a>
                   </div>
                   <h4 class="font-weight-medium"><a href="#">Adoçando a vida</a></h4>
-                  <p class="box-causes-donate">Doe guloseimas variadas para adoçarmos a vida das crianças.</p>
+                  <p class="box-causes-donate">Doe guloseimas variadas para adoçarmos a vida das crianças nesta ação solidária.</p>
                 </article>
               </div>
             </div>
             <div class="col-md-6 col-lg-4 wow-outer">
               <div class="wow fadeInUp">
                 <article class="box-causes">
-                  <div class="box-causes-img"><img src="images/causes-02-372x396.jpg" alt="" width="372" height="396"/><a class="button button-sm button-primary" href="donate.html">Doar</a>
+                  <div class="box-causes-img"><img src="images/papai-noel-crianca.png" alt="" width="372" height="396"/><a class="button button-sm button-primary" href="donate.html">Doar</a>
                   </div>
                   <h4 class="font-weight-medium"><a href="#">Seja o Papai Noel de uma criança</a></h4>
                   <p class="box-causes-donate">Doe um brinquedo ou contribua via PIX.</p>
@@ -225,13 +439,40 @@
             <div class="col-md-6 col-lg-4 wow-outer">
               <div class="wow fadeInUp">
                 <article class="box-causes">
-                  <div class="box-causes-img"><img src="images/causes-03-372x396.jpg" alt="" width="372" height="396"/><a class="button button-sm button-primary" href="donate.html">Doar</a>
+                  <div class="box-causes-img"><img src="images/doacao-leite.png" alt="" width="372" height="396"/><a class="button button-sm button-primary" href="donate.html">Doar</a>
                   </div>
                   <h4 class="font-weight-medium"><a href="#">Doação de leite</a></h4>
                   <p class="box-causes-donate">Faça um ato de amor e generosidade: Doe leite e ajude a alimentar as famílias.
                   </p>
                 </article>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Badges de Confiança -->
+      <section class="section section-xl">
+        <div class="container">
+          <div class="trust-badges">
+            <div class="trust-item">
+              <div class="trust-icon"><span class="linearicons-checkmark-circle"></span></div>
+              <div class="trust-text">17 Anos de<br>Experiência</div>
+            </div>
+            <div class="trust-item">
+              <div class="trust-icon"><span class="linearicons-users2"></span></div>
+              <div class="trust-text">350+ Famílias<br>Atendidas</div>
+            </div>
+            <div class="trust-item">
+              <div class="trust-icon"><span class="linearicons-heart"></span></div>
+              <div class="trust-text">100%<br>Transparência</div>
+            </div>
+            <div class="trust-item">
+              <div class="trust-icon"><span class="linearicons-map-marker"></span></div>
+              <div class="trust-text">17 Cidades<br>Visitadas</div>
+            </div>
+            <div class="trust-item">
+              <div class="trust-icon"><span class="linearicons-medal-empty"></span></div>
+              <div class="trust-text">Impacto<br>Comprovado</div>
             </div>
           </div>
         </div>
@@ -261,9 +502,77 @@
         </div>
       </footer>
     </div>
+    <!-- CTA Fixo Mobile -->
+    <div class="cta-fixed">
+      <a href="donate.html">💚 Quero Doar Agora</a>
+    </div>
     <div class="snackbars" id="form-output-global"></div>
     <script src="js/core.min.js"></script>
     <script src="js/script.js"></script>
+    <script>
+      // Animação de números
+      function animateNumber(element, target, duration = 2000) {
+        let start = 0;
+        let increment = target / (duration / 16);
+        const timer = setInterval(() => {
+          start += increment;
+          if (start >= target) {
+            element.textContent = target.toLocaleString('pt-BR') + '+';
+            clearInterval(timer);
+          } else {
+            element.textContent = Math.floor(start).toLocaleString('pt-BR') + '+';
+          }
+        }, 16);
+      }
+
+      // Observer para animar números quando entrarem na viewport
+      const observerOptions = {
+        threshold: 0.5,
+        rootMargin: '0px'
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting && !entry.target.classList.contains('animated')) {
+            entry.target.classList.add('animated');
+            const numbers = entry.target.querySelectorAll('.impact-number');
+            numbers.forEach(num => {
+              const text = num.textContent;
+              if (text.includes('+')) {
+                const target = parseInt(text.replace('+', ''));
+                animateNumber(num, target);
+              }
+            });
+          }
+        });
+      }, observerOptions);
+
+      // Observer para ocultar CTA quando chegar no footer
+      const footer = document.querySelector('footer');
+      const ctaFixed = document.querySelector('.cta-fixed');
+      
+      if (footer && ctaFixed) {
+        const footerObserver = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              ctaFixed.classList.add('hidden');
+            } else {
+              ctaFixed.classList.remove('hidden');
+            }
+          });
+        }, { threshold: 0.1 });
+        
+        footerObserver.observe(footer);
+      }
+
+      // Animar quando a página carregar
+      window.addEventListener('load', () => {
+        const impactSection = document.querySelector('.impact-numbers');
+        if (impactSection) {
+          observer.observe(impactSection);
+        }
+      });
+    </script>
     <!-- coded by ragnar-->
   </body>
 </html>
