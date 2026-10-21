@@ -1,0 +1,25 @@
+/* Estilos compartilhados das formas de doação (home e página Doar) */
+.how-to-donate { scroll-margin-top: 90px; }
+.donate-card {
+  background: #fff; border-radius: 14px; padding: 32px 28px; height: 100%;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.07); border-top: 4px solid #7FBC4E;
+  display: flex; flex-direction: column;
+}
+.donate-card h4 { margin-bottom: 6px; }
+.donate-card .donate-card-sub { color: #777; font-size: 15px; margin-bottom: 10px; }
+.donate-card dl { margin: 0 0 6px; }
+.donate-card dt { font-size: 12px; text-transform: uppercase; letter-spacing: 1px; color: #888; font-weight: 600; margin-top: 14px; }
+.donate-card dd { font-size: 17px; color: #222; font-weight: 600; margin: 2px 0 0; }
+.donate-card .pix-key { font-family: 'Rubik', sans-serif; font-size: 22px; color: #2d5a1b; letter-spacing: .5px; }
+.donate-card .qr-mini { width: 150px; height: 150px; margin: 18px auto 4px; display: block; border-radius: 8px; }
+.donate-card .qr-large { width: 200px; height: 200px; }
+.copy-btn {
+  margin-top: 14px; width: 100%; background: linear-gradient(135deg, #7FBC4E 0%, #18d26e 100%); border: 0; color: #fff;
+  padding: 13px 16px; border-radius: 50px; font-weight: 700; font-size: 15px; cursor: pointer;
+}
+.copy-btn:focus-visible { outline: 3px solid #2d5a1b; outline-offset: 2px; }
+.copy-btn.copied { background: #2d5a1b; }
+.donate-card .card-foot { margin-top: auto; padding-top: 16px; font-size: 14px; color: #666; }
+.donate-card a.inline-link { color: #5a9a2e; font-weight: 600; text-decoration: underline; }
+.item-chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; padding: 0; list-style: none; }
+.item-chips li { background: #f1f8ec; color: #2d5a1b; border-radius: 50px; padding: 4px 12px; font-size: 13px; font-weight: 600; }

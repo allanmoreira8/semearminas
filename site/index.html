@@ -7,6 +7,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="Semear Minas - Transformando vidas através da solidariedade. Natal Solidário 2026 em Varzelândia (MG), de 19 a 22 de dezembro. Doe brinquedos, alimentos e itens de higiene para famílias e crianças do Norte de Minas.">
     <link rel="icon" href="images/favicon.png" type="image/x-icon">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:site_name" content="Grupo Semear Minas">
+    <meta property="og:title" content="Natal Solidário 2026 em Varzelândia | Semear Minas">
+    <meta property="og:description" content="De 19 a 22 de dezembro levamos alimentos, brinquedos e carinho a famílias de Varzelândia (MG). Doe até 17/12.">
+    <meta property="og:url" content="https://gruposemearminas.org.br/site/index.html">
+    <meta property="og:image" content="https://gruposemearminas.org.br/site/images/og-natal-2026.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Papai Noel e voluntário do Semear Minas com uma criança em uma missão">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="css/doacao.css">
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Poppins:300,300i,400,500,600,700,800,900,900i%7CRoboto:400%7CRubik:100,400,700">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/fonts.css">
@@ -234,29 +246,6 @@
       .btn-impact, .btn-ghost { padding: 15px 26px; font-size: 15px; }
     }
 
-    /* Como doar */
-    .how-to-donate { scroll-margin-top: 90px; }
-    .donate-card {
-      background: #fff; border-radius: 14px; padding: 32px 28px; height: 100%;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.07); border-top: 4px solid #7FBC4E;
-      display: flex; flex-direction: column;
-    }
-    .donate-card h4 { margin-bottom: 6px; }
-    .donate-card .donate-card-sub { color: #777; font-size: 15px; margin-bottom: 10px; }
-    .donate-card dl { margin: 0 0 6px; }
-    .donate-card dt { font-size: 12px; text-transform: uppercase; letter-spacing: 1px; color: #888; font-weight: 600; margin-top: 14px; }
-    .donate-card dd { font-size: 17px; color: #222; font-weight: 600; margin: 2px 0 0; }
-    .donate-card .pix-key { font-family: 'Rubik', sans-serif; font-size: 22px; color: #2d5a1b; letter-spacing: .5px; }
-    .donate-card .qr-mini { width: 150px; height: 150px; margin: 18px auto 4px; display: block; border-radius: 8px; }
-    .copy-btn {
-      margin-top: 14px; width: 100%; background: linear-gradient(135deg, #7FBC4E 0%, #18d26e 100%); border: 0; color: #fff;
-      padding: 13px 16px; border-radius: 50px; font-weight: 700; font-size: 15px; cursor: pointer;
-    }
-    .copy-btn:focus-visible { outline: 3px solid #2d5a1b; outline-offset: 2px; }
-    .copy-btn.copied { background: #2d5a1b; }
-    .donate-card .card-foot { margin-top: auto; padding-top: 16px; font-size: 14px; color: #666; }
-    .donate-card a.inline-link { color: #5a9a2e; font-weight: 600; text-decoration: underline; }
-    .todo-flag { background: #fff3cd; color: #8a6d00; padding: 1px 6px; border-radius: 4px; }
 
     /* Cards Natal Solidário com fotos reais */
     .box-causes .box-causes-img img.cause-photo {
@@ -312,7 +301,7 @@
                   <!-- RD Navbar Toggle-->
                   <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
                   <!-- RD Navbar Brand-->
-                  <div class="rd-navbar-brand"><a href="index.html"><img class="brand-logo-light" src="images/logo-inverse-415x103.png" alt="" width="207" height="51"/></a></div>
+                  <div class="rd-navbar-brand"><a href="index.html"><img class="brand-logo-light" src="images/logo-inverse-415x103.png" alt="Semear Minas" width="207" height="51"/></a></div>
                 </div>
                 <div class="rd-navbar-main-element">
                   <div class="rd-navbar-nav-wrap">
@@ -654,7 +643,7 @@
         <div class="container wow-outer">
           <div class="wow fadeIn">
             <div class="row row-50 row-lg-60">
-              <div class="col-12"><a href="index.html"><img src="images/logo-inverse-415x103.png" alt="" width="207" height="51"/></a></div>
+              <div class="col-12"><a href="index.html"><img src="images/logo-inverse-415x103.png" alt="Semear Minas" width="207" height="51"/></a></div>
               <div class="col-12">
                 <ul class="footer-minimal-nav">
                   <li><a href="about-us.html">Sobre nós</a></li>
@@ -681,6 +670,7 @@
     <div class="snackbars" id="form-output-global"></div>
     <script src="js/core.min.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/doacao.js"></script>
     <script>
 
       // Contagem regressiva para a missão (19/12/2026, horário de Brasília)
@@ -707,27 +697,6 @@
         tick();
       })();
 
-      // Copiar PIX copia e cola
-      document.querySelectorAll('.copy-btn[data-copy]').forEach(function (btn) {
-        var label = btn.textContent;
-        btn.addEventListener('click', function () {
-          var text = btn.getAttribute('data-copy');
-          function done() {
-            btn.classList.add('copied'); btn.textContent = '✅ PIX copiado!';
-            setTimeout(function () { btn.classList.remove('copied'); btn.textContent = label; }, 2500);
-          }
-          function fallback() {
-            var ta = document.createElement('textarea');
-            ta.value = text; ta.style.position = 'fixed'; ta.style.opacity = '0';
-            document.body.appendChild(ta); ta.select();
-            try { document.execCommand('copy'); done(); } catch (e) {}
-            document.body.removeChild(ta);
-          }
-          if (navigator.clipboard && navigator.clipboard.writeText) {
-            navigator.clipboard.writeText(text).then(done).catch(fallback);
-          } else { fallback(); }
-        });
-      });
 
       // Animação de números
       function animateNumber(element, target, duration = 2000) {

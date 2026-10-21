@@ -7,6 +7,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="Conheça a história do Grupo Semear Minas. 18 anos transformando vidas através da solidariedade no Norte de Minas e Vale do Jequitinhonha.">
     <link rel="icon" href="images/favicon.png" type="image/x-icon">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:site_name" content="Grupo Semear Minas">
+    <meta property="og:title" content="Sobre nós | Semear Minas">
+    <meta property="og:description" content="Desde 2009 o Grupo Semear Minas leva um Natal diferente a famílias do Norte de Minas e do Vale do Jequitinhonha.">
+    <meta property="og:url" content="https://gruposemearminas.org.br/site/about-us.html">
+    <meta property="og:image" content="https://gruposemearminas.org.br/site/images/og-natal-2026.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Papai Noel e voluntário do Semear Minas com uma criança em uma missão">
+    <meta name="twitter:card" content="summary_large_image">
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Poppins:300,300i,400,500,600,700,800,900,900i%7CRoboto:400%7CRubik:100,400,700">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/fonts.css">
@@ -165,6 +176,15 @@
       from { transform: scale(0.5); opacity: 0; }
       to { transform: scale(1); opacity: 1; }
     }
+    /* Celular: time e fotos em 2 colunas */
+    @media (max-width: 575px) {
+      .team-classic-caption h4 { font-size: 16px; }
+      .team-classic-caption p { font-size: 11px; letter-spacing: .5px; }
+      .team-classic { height: 100%; }
+      .team-classic-caption { padding-left: 6px; padding-right: 6px; }
+      .timeline-column .list-marked li { font-size: 13px; padding: 10px 10px; }
+      .timeline-column + .timeline-column { margin-top: 0; }
+    }
     </style>
   </head>
   <body>
@@ -190,7 +210,7 @@
                   <!-- RD Navbar Toggle-->
                   <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
                   <!-- RD Navbar Brand-->
-                  <div class="rd-navbar-brand"><a href="index.html"><img class="brand-logo-light" src="images/logo-inverse-415x103.png" alt="" width="207" height="51"/></a></div>
+                  <div class="rd-navbar-brand"><a href="index.html"><img class="brand-logo-light" src="images/logo-inverse-415x103.png" alt="Semear Minas" width="207" height="51"/></a></div>
                 </div>
                 <div class="rd-navbar-main-element">
                   <div class="rd-navbar-nav-wrap">
@@ -232,7 +252,7 @@
       <section class="section section-lg bg-gray-1 bg-gray-1-decor">
         <div class="container">
           <div class="row row-50">
-            <div class="col-lg-6 pr-xl-5"><img src="images/about-us-1-518x430.jpg" alt="" width="518" height="430"/>
+            <div class="col-lg-6 pr-xl-5"><img src="images/about-us-1-518x430.jpg" alt="Voluntários do Semear Minas com moradores em frente a uma casa, em uma missão de Natal" width="518" height="430"/>
             </div>
             <div class="col-lg-6">
               <h3>Antes de tudo, deixe-nos apresentar a você!</h3>
@@ -256,7 +276,7 @@
         <div class="container">
           <h3 class="text-center">📍 Por onde passamos</h3>
           <div class="row row-50">
-            <div class="col-sm-6 timeline-column">
+            <div class="col-6 timeline-column">
               <ul class="list-marked">
                 <li><span class="linearicons-loading" style="color: #18d26e;"></span> 2026: Varzelândia <small style="color: #18d26e;">(Em andamento)</small></li>
                 <li>2025: Setubinha</li>
@@ -269,7 +289,7 @@
                 <li>2018: Itaipé</li>
               </ul>
             </div>
-            <div class="col-sm-6 timeline-column">
+            <div class="col-6 timeline-column">
               <ul class="list-marked">
                 <li>2017: Itinga</li>
                 <li>2016: Itacambira</li>
@@ -289,7 +309,7 @@
         <div class="container">
           <h3 class="text-center">Nosso time</h3>
           <div class="row no-gutters">
-            <div class="col-md-6 col-lg-4">
+            <div class="col-6 col-lg-4">
               <div class="team-classic">
                 <div class="team-classic-caption">
                   <h4><a class="team-name" href="#">Gilberto Pereira</a></h4>
@@ -297,7 +317,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-6 col-lg-4">
+            <div class="col-6 col-lg-4">
               <div class="team-classic">
                 <div class="team-classic-caption">
                   <h4><a class="team-name" href="#">Juliana Pereira</a></h4>
@@ -305,7 +325,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-6 col-lg-4">
+            <div class="col-6 col-lg-4">
               <div class="team-classic">
                 <div class="team-classic-caption">
                   <h4><a class="team-name" href="#">Carlos Oliveira</a></h4>
@@ -313,7 +333,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-6 col-lg-4">
+            <div class="col-6 col-lg-4">
               <div class="team-classic">
                 <div class="team-classic-caption">
                   <h4><a class="team-name" href="#">Wellington Palaretti</a></h4>
@@ -321,7 +341,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-6 col-lg-4">
+            <div class="col-6 col-lg-4">
               <div class="team-classic">
                 <div class="team-classic-caption">
                   <h4><a class="team-name" href="#">Getulio Pereira</a></h4>
@@ -329,7 +349,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-6 col-lg-4">
+            <div class="col-6 col-lg-4">
               <div class="team-classic">
                 <div class="team-classic-caption">
                   <h4><a class="team-name" href="#">Everton da Silva</a></h4>
@@ -341,44 +361,44 @@
         </div>
         <div class="container">
           <div class="row no-gutters">
-            <div class="col-md-6 col-lg-4">
+            <div class="col-6 col-lg-4">
               <div class="team-classic">
-                <div class="team-classic-figure"><img src="images/team-classic-1-390x252.jpg" alt="" width="390" height="252"/>
+                <div class="team-classic-figure"><img src="images/team-classic-1-390x252.jpg" alt="Voluntários comemorando em uma quadra durante a festa de Natal" width="390" height="252"/>
                   
                 </div>
               </div>
             </div>
-            <div class="col-md-6 col-lg-4">
+            <div class="col-6 col-lg-4">
               <div class="team-classic">
-                <div class="team-classic-figure"><img src="images/team-classic-2-390x252.jpg" alt="" width="390" height="252"/>
+                <div class="team-classic-figure"><img src="images/team-classic-2-390x252.jpg" alt="Equipe de voluntários reunida na quadra" width="390" height="252"/>
                   
                 </div>
               </div>
             </div>
-            <div class="col-md-6 col-lg-4">
+            <div class="col-6 col-lg-4">
               <div class="team-classic">
-                <div class="team-classic-figure"><img src="images/team-classic-3-390x252.jpg" alt="" width="390" height="252"/>
+                <div class="team-classic-figure"><img src="images/team-classic-3-390x252.jpg" alt="Comboio de caminhonetes dos voluntários antes da viagem" width="390" height="252"/>
                   
                 </div>
               </div>
             </div>
-            <div class="col-md-6 col-lg-4">
+            <div class="col-6 col-lg-4">
               <div class="team-classic">
-                <div class="team-classic-figure"><img src="images/team-classic-4-390x252.jpg" alt="" width="390" height="252"/>
+                <div class="team-classic-figure"><img src="images/team-classic-4-390x252.jpg" alt="Voluntário em selfie com o grupo e as caminhonetes ao fundo" width="390" height="252"/>
                   
                 </div>
               </div>
             </div>
-            <div class="col-md-6 col-lg-4">
+            <div class="col-6 col-lg-4">
               <div class="team-classic">
-                <div class="team-classic-figure"><img src="images/team-classic-5-390x252.jpg" alt="" width="390" height="252"/>
+                <div class="team-classic-figure"><img src="images/team-classic-5-390x252.jpg" alt="Papai Noel visitando crianças em uma comunidade rural" width="390" height="252"/>
                   
                 </div>
               </div>
             </div>
-            <div class="col-md-6 col-lg-4">
+            <div class="col-6 col-lg-4">
               <div class="team-classic">
-                <div class="team-classic-figure"><img src="images/team-classic-6-390x252.jpg" alt="" width="390" height="252"/>
+                <div class="team-classic-figure"><img src="images/team-classic-6-390x252.jpg" alt="Caminhonete com doações chegando a uma comunidade" width="390" height="252"/>
                   
                 </div>
               </div>
@@ -397,7 +417,7 @@
         <div class="container wow-outer">
           <div class="wow fadeIn">
             <div class="row row-50 row-lg-60">
-              <div class="col-12"><a href="index.html"><img src="images/logo-inverse-415x103.png" alt="" width="207" height="51"/></a></div>
+              <div class="col-12"><a href="index.html"><img src="images/logo-inverse-415x103.png" alt="Semear Minas" width="207" height="51"/></a></div>
               <div class="col-12">
                 <ul class="footer-minimal-nav">
                   <li><a href="about-us.html">Sobre nós</a></li>

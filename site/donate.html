@@ -5,8 +5,20 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="Faça sua doação para o Grupo Semear Minas. PIX, transferência bancária ou QR Code. Transforme vidas através da solidariedade!">
+    <meta name="description" content="Doe para o Natal Solidário 2026 do Grupo Semear Minas em Varzelândia (MG): PIX, transferência bancária ou doação de itens até 17 de dezembro.">
     <link rel="icon" href="images/favicon.png" type="image/x-icon">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:site_name" content="Grupo Semear Minas">
+    <meta property="og:title" content="Doe para o Natal Solidário 2026 | Semear Minas">
+    <meta property="og:description" content="PIX, transferência ou doação de itens até 17 de dezembro. Tudo segue para as famílias de Varzelândia (MG).">
+    <meta property="og:url" content="https://gruposemearminas.org.br/site/donate.html">
+    <meta property="og:image" content="https://gruposemearminas.org.br/site/images/og-natal-2026.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Papai Noel e voluntário do Semear Minas com uma criança em uma missão">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="css/doacao.css">
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Poppins:300,300i,400,500,600,700,800,900,900i%7CRoboto:400%7CRubik:100,400,700">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/fonts.css">
@@ -201,7 +213,7 @@
                   <!-- RD Navbar Toggle-->
                   <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
                   <!-- RD Navbar Brand-->
-                  <div class="rd-navbar-brand"><a href="index.html"><img class="brand-logo-light" src="images/logo-inverse-415x103.png" alt="" width="207" height="51"/></a></div>
+                  <div class="rd-navbar-brand"><a href="index.html"><img class="brand-logo-light" src="images/logo-inverse-415x103.png" alt="Semear Minas" width="207" height="51"/></a></div>
                 </div>
                 <div class="rd-navbar-main-element">
                   <div class="rd-navbar-nav-wrap">
@@ -243,33 +255,53 @@
       <!-- Hero Section -->
       <section class="donate-hero">
         <div class="container">
-          <h1 class="donate-hero-title">💚 Sua Doação Transforma Vidas!</h1>
-          <p class="donate-hero-text">Faça parte desta corrente de solidariedade que já beneficiou milhares de famílias no Norte de Minas e Vale do Jequitinhonha. Sua contribuição, seja qual for o valor, faz toda a diferença!</p>
+          <h1 class="donate-hero-title">💚 Natal Solidário 2026</h1>
+          <p class="donate-hero-text">Tudo o que for arrecadado até <strong>17 de dezembro</strong> segue com os voluntários para Varzelândia, onde a missão acontece de 19 a 22 de dezembro.</p>
         </div>
       </section>
-      <!-- Base typography -->
-      <section class="section section-lg bg-default">
+      <section class="section section-lg bg-default how-to-donate">
         <div class="container">
-          <div class="row row-50 justify-content-xl-between">
-            <div class="col-xl-7 donation-methods">
-              <h3 class="method-title">🔹 PIX (Copiar Chave)</h3>
-              <div class="pix-code" id="pix-code">00020126490014br.gov.bcb.pix0114504297140001980209Misso20245204000053039865802BR5918GRUPO SEMEAR MINAS6008BRASILIA62070503***6304D063</div>
-              <button class="copy-button" onclick="copy_to_clipboard('00020126490014br.gov.bcb.pix0114504297140001980209Misso20245204000053039865802BR5918GRUPO SEMEAR MINAS6008BRASILIA62070503***6304D063')">📋 Copiar Chave PIX</button>
-              
-              <h3 class="method-title" style="margin-top: 60px;">📱 QR Code</h3>
-              <div class="qr-code-section">
-                <img src="images/qr-code.jpg" alt="QR Code PIX para doação ao Grupo Semear Minas" style="max-width: 400px;">
-                <p style="margin-top: 20px; color: #666;">Escaneie com o aplicativo do seu banco para doar instantaneamente via PIX</p>
+          <div class="row row-30">
+            <div class="col-md-6 col-lg-4">
+              <div class="donate-card">
+                <h4>💸 PIX</h4>
+                <p class="donate-card-sub">Aponte a câmera do app do seu banco ou copie o código.</p>
+                <img class="qr-mini qr-large" src="images/qr-code.jpg" alt="QR Code PIX do Grupo Semear Minas">
+                <button type="button" class="copy-btn" data-copy="00020126490014br.gov.bcb.pix0114504297140001980209Misso20245204000053039865802BR5918GRUPO SEMEAR MINAS6008BRASILIA62070503***6304D063">📋 Copiar PIX copia e cola</button>
+                <dl>
+                  <dt>Ou use a chave (CNPJ)</dt>
+                  <dd class="pix-key">50.429.714/0001-98</dd>
+                </dl>
               </div>
             </div>
-            <div class="col-xl-4">
-              <div class="bank-info-card">
-                <h4>🏦 Transferência Bancária</h4>
-                <h5>Grupo Semear Minas</h5>
-                <h5>CNPJ: 50.429.714/0001-98</h5>
-                <h5>Banco: Santander</h5>
-                <h5>Agência: 3893</h5>
-                <h5>Conta: 13006790-5</h5>
+            <div class="col-md-6 col-lg-4">
+              <div class="donate-card">
+                <h4>🏦 Transferência</h4>
+                <p class="donate-card-sub">TED ou depósito na conta do grupo.</p>
+                <dl>
+                  <dt>Favorecido</dt><dd>Grupo Semear Minas</dd>
+                  <dt>CNPJ</dt><dd>50.429.714/0001-98</dd>
+                  <dt>Banco</dt><dd>Santander</dd>
+                  <dt>Agência</dt><dd>3893</dd>
+                  <dt>Conta</dt><dd>13006790-5</dd>
+                </dl>
+                <p class="card-foot">O valor arrecadado vira cestas, leite e brinquedos comprados para a missão.</p>
+              </div>
+            </div>
+            <div class="col-md-12 col-lg-4">
+              <div class="donate-card">
+                <h4>📦 Doação de itens</h4>
+                <p class="donate-card-sub">O que mais precisamos:</p>
+                <ul class="item-chips">
+                  <li>Brinquedos</li><li>Guloseimas</li><li>Leite integral (caixa 12 L)</li>
+                  <li>Alimentos não perecíveis</li><li>Higiene e limpeza</li><li>Roupas em bom estado</li>
+                </ul>
+                <dl>
+                  <dt>Onde entregar</dt>
+                  <dd><a class="inline-link" href="https://maps.app.goo.gl/d7MpUBmaKYp5USvQ6" target="_blank" rel="noopener">R. Cel. Gabriel de Andrade, 750 – Industrial, Contagem/MG</a></dd>
+                  <dt>Até quando</dt><dd>17 de dezembro</dd>
+                </dl>
+                <p class="card-foot">Precisa combinar a entrega? <a class="inline-link" href="https://wa.me/5531993437929" target="_blank" rel="noopener">Chame no WhatsApp</a>.</p>
               </div>
             </div>
           </div>
@@ -280,7 +312,7 @@
         <div class="container wow-outer">
           <div class="wow fadeIn">
             <div class="row row-50 row-lg-60">
-              <div class="col-12"><a href="index.html"><img src="images/logo-inverse-415x103.png" alt="" width="207" height="51"/></a></div>
+              <div class="col-12"><a href="index.html"><img src="images/logo-inverse-415x103.png" alt="Semear Minas" width="207" height="51"/></a></div>
               <div class="col-12">
                 <ul class="footer-minimal-nav">
                   <li><a href="about-us.html">Sobre nós</a></li>
@@ -307,6 +339,7 @@
     <div class="snackbars" id="form-output-global"></div>
     <script src="js/core.min.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/doacao.js"></script>
     <script>
       // Função para mostrar toast notification
       function showToast(message) {
